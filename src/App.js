@@ -9,7 +9,7 @@ const App = () => {
       <Helmet>
         <title>사이트 제목 변경 테스트!</title>
       </Helmet>
-      <div>{t('USER_ID')}</div>
+      <div>{t('아이디')}</div>
       <div>{t('약관에_동의')}</div>
       <div>{t('없는 문구')}</div>
       <button type="button" onClick={()=> i18n.changeLanguage('ko')}>한국어</button>
