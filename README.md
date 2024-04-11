@@ -64,8 +64,8 @@ yarn add i18next react-i18next
 - 언어파일 생성
     - src/langs/ko , src/langs/en
     - 각 폴더별로 공통 문구 - commons.js , 검증 문구 - validations.js , 에러 문구 - errors.js 
-    - 언어파일 통합 : 예) src/langs/ko/index.js
-
+    - 언어파일 통합 : 예 src/langs/ko/index.js
+z
 ```js
 import commons from "./commons";
 import validations from "./validations";
@@ -187,3 +187,12 @@ root.render(
 
 - commons/pages/Error.js
 - commons/components/ErrorDisplay.js
+
+# 스타일링
+
+## 공통 스타일 : src/index.css
+
+- 공통 폰트
+- 스타일 초기화
+- 기준 폰트 사이즈 : src/styles/fontSize.js / small , normal ,medium, big , extraBig 
+- 기준 컬러 :

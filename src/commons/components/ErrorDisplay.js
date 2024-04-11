@@ -1,8 +1,7 @@
-import React, { Children } from "react";
+import React from 'react';
 
-const ErrorDisplay = () => {
-    return <div>{Children}</div>;
-
+const ErrorDisplay = ({ children }) => {
+  return <div>{children}</div>;
 };
 
 export default React.memo(ErrorDisplay);
