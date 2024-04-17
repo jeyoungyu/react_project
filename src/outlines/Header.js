@@ -35,6 +35,7 @@ const HeaderBox = styled.header`
       }
     }
   }
+
   .logo-search {
     div {
       display: flex;
@@ -47,17 +48,15 @@ const HeaderBox = styled.header`
         height: 45px;
         width: 380px;
 
-
         button {
           width: 45px;
           background: ${dark};
           border: 0;
           cursor: pointer;
-          
+
           svg {
             color: ${light};
             font-size: 1.75rem;
-            
           }
         }
 
