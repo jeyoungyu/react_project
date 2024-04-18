@@ -35,61 +35,64 @@ const FormBox = styled.form`
   }
 `;
 
-const JoinForm = ({ form , onSubmit , onChange , onToggle , onReset ,errors }) => {
-    
+const JoinForm = ({ form, onSubmit, onChange, onToggle, onReset, errors }) => {
   const { t } = useTranslation();
   return (
     <FormBox autoComplete="off" onSubmit={onSubmit}>
       <dl>
         <dt>{t('이메일')}</dt>
         <dd>
-          <InputBox type="text" 
-          name='email' 
-          value={form.email ?? ''} 
-          onChange={onChange}
+          <InputBox
+            type="text"
+            name="email"
+            value={form.email ?? ''}
+            onChange={onChange}
           />
-          <MessageBox messages={errors.email} color='danger'/>
+          <MessageBox messages={errors.email} color="danger" />
         </dd>
       </dl>
       <dl>
         <dt>{t('비밀번호')}</dt>
         <dd>
-          <InputBox type="password" 
-          name='password' 
-          value={form.password ?? ''}
-          onChange={onChange}
+          <InputBox
+            type="password"
+            name="password"
+            value={form.password ?? ''}
+            onChange={onChange}
           />
-          <MessageBox messages={errors.password} color='danger'/>
+          <MessageBox messages={errors.password} color="danger" />
         </dd>
       </dl>
       <dl>
         <dt>{t('비밀번호_확인')}</dt>
         <dd>
-          <InputBox type="password" 
-          name='confirmPassword' 
-          value={form.confirmPassword ?? ''} 
-          onChange={onChange}
+          <InputBox
+            type="password"
+            name="confirmPassword"
+            value={form.confirmPassword ?? ''}
+            onChange={onChange}
           />
-          <MessageBox messages={errors.confirmPassword} color='danger'/>
+          <MessageBox messages={errors.confirmPassword} color="danger" />
         </dd>
       </dl>
       <dl>
         <dt>{t('회원명')}</dt>
         <dd>
-          <InputBox type="text" 
-          name='name' 
-          value={form.name ?? ''} 
-          onChange={onChange} 
-        />
-        <MessageBox messages={errors.name} color='danger'/>
+          <InputBox
+            type="text"
+            name="name"
+            value={form.name ?? ''}
+            onChange={onChange}
+          />
+          <MessageBox messages={errors.name} color="danger" />
         </dd>
       </dl>
 
       <div className="terms-agree" onClick={onToggle}>
-        { form.agree ? <FaRegCheckSquare /> : <FaCheckSquare/>}
+        {form.agree ? <FaCheckSquare /> : <FaRegCheckSquare />}
         {t('회원가입_약관에_동의합니다.')}
 
-        <MessageBox messages={errors.agree} color='danger'/>
+        <MessageBox messages={errors.agree} color="danger" />
       </div>
 
       <ButtonGroup width={450}>
